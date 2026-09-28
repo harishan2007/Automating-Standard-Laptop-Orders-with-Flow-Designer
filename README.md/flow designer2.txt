@@ -1,0 +1,15 @@
+(function execute(inputs, outputs) {
+
+    var request = new GlideRecord('sc_request');
+
+    if (request.get(inputs.request_sys_id)) {
+
+        request.description =
+            'Standard Laptop Order - Automated Procurement';
+
+        request.update();
+
+        outputs.status = 'Request processed successfully';
+    }
+
+})(inputs, outputs);

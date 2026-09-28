@@ -1,0 +1,52 @@
+Project Title:
+Streamlining IT Procurement: Automating Standard Laptop Orders with Flow Designer
+
+1. Service Catalog
+   └── Standard Laptop Request
+       ├── Laptop Model
+       ├── Employee Name
+       ├── Department
+       ├── Justification
+       └── Delivery Location
+
+2. Flow Designer
+   └── Standard Laptop Order Flow
+       ├── Trigger
+       │   └── Service Catalog Request Created
+       │
+       ├── Get Catalog Variables
+       │
+       ├── Check Laptop Type
+       │
+       ├── Create / Update Request
+       │
+       ├── Approval
+       │   └── Manager Approval
+       │
+       ├── Create Procurement Task
+       │
+       ├── Assign to IT Procurement Group
+       │
+       ├── Update Request Status
+       │
+       └── Send Notification
+
+3. Automation Logic
+
+   Request Created
+        ↓
+   Check Laptop Request
+        ↓
+   Manager Approval
+        ↓
+   Approved?
+      ↙    ↘
+    Yes      No
+     ↓        ↓
+ Procurement  Reject
+     ↓
+ IT Procurement Task
+     ↓
+ Update Request
+     ↓
+ Notify Employee
